@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Find 5 Differences</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<header>
+    <h1>🔍 Find 5 Differences Between Two Cities</h1>
+    <p class="subtitle">
+        Look carefully at the picture and choose the FIVE differences.
+    </p>
+</header>
+
+<!-- SCORE BOARD -->
+
+<section class="score-board">
+
+    <div class="card">
+        <h2>⏰ Time</h2>
+        <p id="time">90</p>
+    </div>
+
+    <div class="card">
+        <h2>⭐ Score</h2>
+        <p><span id="score">0</span>/5</p>
+    </div>
+
+    <div class="card">
+        <h2>💡 Hints</h2>
+        <p id="hints">3</p>
+    </div>
+
+</section>
+
+<!-- PROGRESS BAR -->
+
+<div class="progress">
+    <div class="progress-fill" id="progressFill"></div>
+</div>
+
+<!-- IMAGE -->
+
+<div class="image-container">
+    <img src="city.png" alt="Two Cities">
+</div>
+
+<!-- QUESTION -->
+
+<h2 class="question">
+Which FIVE things are different?
+</h2>
+
+<!-- ANSWERS -->
+
+<div class="buttons" id="buttonContainer">
+
+<button data-answer="true">🌳 Green spaces</button>
+
+<button data-answer="true">🚌 Public transportation</button>
+
+<button data-answer="true">🏫 School system</button>
+
+<button data-answer="true">🗑️ Rubbish</button>
+
+<button data-answer="true">🚗 Traffic jams</button>
+
+<button data-answer="false">🏖️ Beaches</button>
+
+<button data-answer="false">✈️ Airport</button>
+
+<button data-answer="false">🏟️ Stadium</button>
+
+<button data-answer="false">🚲 Bicycle lanes</button>
+
+<button data-answer="false">🛍️ Shopping mall</button>
+
+</div>
+
+<!-- MESSAGE -->
+
+<div id="message"></div>
+
+<!-- CONTROL BUTTONS -->
+
+<div class="controls">
+
+<button id="hintBtn">
+💡 Hint
+</button>
+
+<button id="restartBtn">
+🔄 Restart
+</button>
+
+</div>
+
+<!-- RESULT POPUP -->
+
+<div id="popup"
+style="
+display:none;
+position:fixed;
+left:0;
+top:0;
+width:100%;
+height:100%;
+background:rgba(0,0,0,.75);
+justify-content:center;
+align-items:center;
+z-index:999;
+">
+
+<div
+style="
+background:white;
+color:#0F4C81;
+padding:40px;
+border-radius:20px;
+width:90%;
+max-width:420px;
+text-align:center;
+">
+
+<h1 id="popupTitle">
+Congratulations!
+</h1>
+
+<br>
+
+<p id="popupText">
+You found all five differences.
+</p>
+
+<br>
+
+<button id="playAgain">
+Play Again
+</button>
+
+</div>
+
+</div>
+
+<script src="script.js"></script>
+
+</body>
+</html>
